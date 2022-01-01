@@ -177,8 +177,8 @@ class AGM(Minimizer):
             if d_norm < self._tol or self._iter >= self._max_iter:  # 迭代终止判断
                 break
 
-            # if abs(obj - best_obj)/abs(max(1, best_obj)) < self._tol or self._iter >= self._max_iter:  # 迭代终止判断
-                # break
+            if abs(obj - best_obj)/abs(max(1, best_obj)) < self._tol or self._iter >= self._max_iter:  # 迭代终止判断
+                break
             elif obj < best_obj:
                 best_obj = obj
 
